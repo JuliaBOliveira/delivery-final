@@ -1,0 +1,38 @@
+.input {
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 10px;
+  background: #fdfaf6;
+  transition: 0.2s;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  background: #faf1e6;
+}
+
+.wrapper {
+  margin-bottom: 16px;
+}
+
+.erro {
+  color: #fa1e0e;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  line-height: 1px;
+  padding: 8px 8px;
+}
+
+h1 {
+  margin-top: 8px;
+}

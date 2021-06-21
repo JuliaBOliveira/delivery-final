@@ -1,0 +1,17 @@
+.modalTeste {
+  border: none;
+}
+
+.modalTeste__body {
+  background: white;
+  width: calc(100% - 64px);
+  height: calc(100% - 128px);
+  border-radius: 8px;
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  overflow: auto;
+  outline: none;
+}
