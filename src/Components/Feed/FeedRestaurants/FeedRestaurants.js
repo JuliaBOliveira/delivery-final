@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ItemRestaurante from './FeedRestaurants/ItemRestaurante';
-import ItemHeader from './Item/ItemHeader';
+import SearchBar from '../../SearchBar';
 import ItemAlimento from './FeedRestaurants/ItemAlimento';
 import api from '../../../service/axios';
 import Modal from '@material-ui/core/Modal';
-import Loading from '../../../Helpers/Loading';
 import './index.css';
 
 const FeedRestaurants = () => {
@@ -29,6 +28,11 @@ const FeedRestaurants = () => {
 
   return (
     <>
+      <SearchBar
+        className="searchBar"
+        setDataRestaurante={setDataRestaurante}
+      />
+
       <ul>
         <ItemRestaurante
           setOpen={setOpen}

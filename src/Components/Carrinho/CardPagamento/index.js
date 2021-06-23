@@ -4,12 +4,9 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-import { useGlobalContext } from '../../../Components/_context/GlobalContext';
 import './index.css';
 
 const CardPagamento = () => {
-  const { cart } = useGlobalContext();
   const [value, setValue] = React.useState('Pix');
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -22,14 +19,14 @@ const CardPagamento = () => {
         <FormControl component="fieldset">
           <RadioGroup aria-label="gender" name="gender1" value={value}>
             <FormControlLabel
-              value="female"
+              value="pix"
               onChange={handleChange}
               control={<Radio />}
               label="Pix"
             />
             <Divider component="ul" />
             <FormControlLabel
-              value="male"
+              value="credit-card"
               onChange={handleChange}
               control={<Radio />}
               label="Cartão de crédito"

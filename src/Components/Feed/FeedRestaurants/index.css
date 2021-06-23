@@ -15,3 +15,7 @@
   overflow: auto;
   outline: none;
 }
+
+.searchBar {
+  margin-bottom: 32px;
+}
