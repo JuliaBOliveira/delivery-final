@@ -7,12 +7,77 @@
   padding: 16px;
   margin-bottom: 24px;
   border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
 }
 
 .restaurante__img {
-  max-width: 190px;
+  align-self: center;
+  max-width: 130px;
   margin-right: 12px;
 }
 
 .restaurante_descricao {
+}
+
+.alimento {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.alimento__img {
+  align-self: center;
+  max-width: 80px;
+  margin-right: 12px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+}
+
+.alimento__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+
+.alimento_descricao::after {
+}
+
+.but-add {
+  position: fixed;
+}
+
+.but-remove {
+  margin-right: 4px;
+}
+
+.p-count {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.geral {
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count-butatc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.but-atc {
+  background: #fa4a0c;
+  color: white;
 }

@@ -1,0 +1,8 @@
+.itens {
+  height: 400px;
+}
+
+.detalhes-pedido {
+  display: flex;
+  justify-content: space-between;
+}

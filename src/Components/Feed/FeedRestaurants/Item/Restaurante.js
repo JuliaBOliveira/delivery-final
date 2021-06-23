@@ -11,7 +11,6 @@ const Restaurante = ({ name, img, category, description }) => {
         <h3>{name}</h3>
         <p>{category}</p>
         <p>{description}</p>
-        <p>Teste</p>
       </div>
     </div>
   );

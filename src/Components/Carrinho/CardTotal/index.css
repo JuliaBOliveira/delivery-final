@@ -1,0 +1,38 @@
+.total {
+  width: 300px;
+  height: 180px;
+  background: white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 24px;
+  align-content: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.valor-itens {
+  display: flex;
+  justify-content: space-between;
+}
+
+.valor-entrega {
+  display: flex;
+  justify-content: space-between;
+}
+
+.valor-total {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.p-total {
+  font-weight: 700;
+}
+
+.span-total {
+  font-weight: 600;
+}

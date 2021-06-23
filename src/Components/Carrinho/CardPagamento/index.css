@@ -1,0 +1,19 @@
+.pagamentoGeral {
+  background: white;
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+  padding-left: 10px;
+  align-content: center;
+}
+
+.pagamentoGeral::before {
+}
+
+.titlePagamento {
+  margin-bottom: 8px;
+  font-weight: 900;
+}
+
+.pagamento-tipo {
+}

@@ -3,7 +3,7 @@
 }
 
 .modalTeste__body {
-  background: white;
+  background: #fbe6c2;
   width: calc(100% - 64px);
   height: calc(100% - 128px);
   border-radius: 8px;

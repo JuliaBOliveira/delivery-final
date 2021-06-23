@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ItemRestaurante from './FeedRestaurants';
+import ItemRestaurante from './FeedRestaurants/ItemRestaurante';
+import ItemHeader from './Item/ItemHeader';
 import ItemAlimento from './FeedRestaurants/ItemAlimento';
 import api from '../../../service/axios';
 import Modal from '@material-ui/core/Modal';
@@ -10,39 +11,33 @@ const FeedRestaurants = () => {
   const [dataRestaurante, setDataRestaurante] = useState(null);
   const [dataAlimento, setDataAlimento] = useState(null);
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [restauranteSelecionado, setRestauranteSelecionado] = useState();
 
   function getEstabelecimento() {
-    /* api.get('/estabelecimento').then((response) => {
-      console.log('response', response);
-      //debugger;
+    api.get('/estabelecimento').then((response) => {
       setDataRestaurante(response.data);
-    }); */
-
-    fetch('http://localhost:3000/estabelecimento').then((response) =>
-      response.json().then((data) => console.log('data', data)),
-    );
-    //.then((variavel) => console.log('variavel', variavel));
+    });
+    api.get('/alimentos').then((response) => {
+      setDataAlimento(response.data);
+    });
   }
 
   useEffect(() => {
     getEstabelecimento();
-
-    /*  axios
-      .get('/alimentos')
-      .then((response) => setDataAlimento(response.data))
-      .catch((err) => {
-        console.log('oops! ocorreu um erro!', err);
-      }); */
   }, []);
 
   return (
     <>
       <ul>
-        <ItemRestaurante setOpen={setOpen} dataRestaurante={dataRestaurante} />
+        <ItemRestaurante
+          setOpen={setOpen}
+          dataRestaurante={dataRestaurante}
+          setRestauranteSelecionado={setRestauranteSelecionado}
+        />
       </ul>
 
-      {/*  <Modal
+      <Modal
         className="modalTeste"
         open={open}
         onClose={() => setOpen(false)}
@@ -51,21 +46,13 @@ const FeedRestaurants = () => {
       >
         <div className="modalTeste__body">
           {dataAlimento && (
-            <ul>
-              {dataAlimento?.map((alimento) => (
-                <ItemAlimento
-                  key={alimento.idalimento}
-                  name={alimento.nomealimento}
-                  description={alimento.descricaoalimento}
-                  img={alimento.imgalimento}
-                  price={alimento.precoalimento}
-                />
-              ))}
-            </ul>
+            <ItemAlimento
+              dataAlimento={dataAlimento}
+              restauranteSelecionado={restauranteSelecionado}
+            />
           )}
-          Teste
         </div>
-      </Modal> */}
+      </Modal>
     </>
   );
 };

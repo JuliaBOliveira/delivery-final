@@ -14,6 +14,7 @@ const Header = () => {
         <Link to="/" className="links">
           <Cat className="mainIcon" />
         </Link>
+
         {data ? (
           <Link to="/conta" className="login">
             {data.nome}

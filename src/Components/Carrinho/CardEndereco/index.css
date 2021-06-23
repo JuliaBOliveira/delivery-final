@@ -1,0 +1,44 @@
+.usuarioCardEnde {
+  background: white;
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.fixpCardEnde {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.usuarioCardEnde {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-usuario {
+  margin-bottom: 4px;
+  margin-left: 8px;
+  line-height: 52px;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-usuario__nome {
+  font-weight: bold;
+  line-height: 52px;
+  margin-left: 8px;
+}
+
+.fixpCardEnde__entrega {
+  font-weight: 900;
+}
+
+.fixpCardEnde__trocar {
+  color: #f47b0a;
+}
+
+.fixpCardEnde__trocar:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.after-header {
+  padding: 64px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.figure-cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cart-count {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: #ac0d0d;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.title-restaurante {
+  font-weight: bold;
+}
