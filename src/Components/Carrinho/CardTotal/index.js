@@ -1,14 +1,27 @@
 import React from 'react';
-import { useGlobalContext } from '../../../Components/_context/GlobalContext';
+import api from '../../../service/axios';
 import Button from '@material-ui/core/Button';
 import './index.css';
+import { useGlobalContext } from '../../../Components/_context/GlobalContext';
 
 const CardTotal = () => {
   const { cart } = useGlobalContext();
 
+  function handleCart(event) {
+    event.preventDefault();
+    console.log('cart', cart);
+    cart.map((item) =>
+      postCarrinho(item.nome, item.quantidade, item.preco, item.restaurante),
+    );
+  }
+
   function handleValor(preco, quantidade) {
     let total = preco * quantidade;
     return total;
+  }
+
+  function postCarrinho(nomeitem, quantidadeitem, precoitem, restaurante) {
+    api.post('/carrinho', { nomeitem, quantidadeitem, precoitem, restaurante });
   }
 
   return (
@@ -29,8 +42,10 @@ const CardTotal = () => {
         <p className="p-total">Total</p>
         <p className="span-total">R$ 69.00</p>
       </div>
-
-      <Button variant="contained">Finalizar compra</Button>
+      {}
+      <Button variant="contained" onClick={(e) => handleCart(e)}>
+        Finalizar compra
+      </Button>
     </div>
   );
 };
